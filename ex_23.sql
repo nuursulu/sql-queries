@@ -8,6 +8,6 @@ FROM InvoiceLine I
          JOIN Invoice I2 on I.InvoiceId = I2.InvoiceId
          JOIN Track T on I.TrackId = T.TrackId
 WHERE I2.InvoiceDate like '%2013%'
-GROUP BY Name
+GROUP BY I.TrackId
 ORDER BY QuantitySum DESC
 ;
