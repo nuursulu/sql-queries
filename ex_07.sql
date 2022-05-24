@@ -7,4 +7,5 @@
 SELECT I.Total, (C.FirstName || ' ' || C.LastName), I.BillingCountry, (E.FirstName || ' ' || E.LastName)
 FROM Employee E
          JOIN Customer C on E.EmployeeId = C.SupportRepId
-         JOIN Invoice I on C.CustomerId = I.CustomerId;
+         JOIN Invoice I on C.CustomerId = I.CustomerId
+WHERE E.Title like '%sales%agent%';
